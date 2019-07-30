@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="{39D25CFD-A45A-49BE-BCAC-6608EE3D2D1A}" Name="WixInstaller" Language="1033" Version="1.0.0.0" Manufacturer="LearnWix" UpgradeCode="1b4fea5c-8357-48d7-ba45-381dbf95800e">
+
+  <!--Add Guid specific to platform.-->
+  <?if $(var.Platform)=x64?>
+  <?define productCode="{39D25CFD-A45A-49BE-BCAC-6608EE3D2D1A}"?>
+  <?else?>
+  <?define productCode="{F214E0C5-9E3B-42BE-B10A-8B732F87DDBA}"?>
+  <?endif?>
+
+  <Product Id="$(var.productCode)"
+           Name="WixRandomAppInstaller" Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="EvolvedMonkeyHere"
+           UpgradeCode="1b4fea5c-8357-48d7-ba45-381dbf95800e">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -21,7 +33,7 @@
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
 			<!-- <Component Id="ProductComponent"> -->
 				<!-- TODO: Insert files, registry keys, and other resources here. -->
 			<!-- </Component> -->

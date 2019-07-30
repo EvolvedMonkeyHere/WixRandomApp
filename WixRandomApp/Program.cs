@@ -6,7 +6,7 @@ namespace WixRandomApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("This is Test");
+            Console.WriteLine("RandomApp :: This is Test");
             Console.Read();
 
         }
