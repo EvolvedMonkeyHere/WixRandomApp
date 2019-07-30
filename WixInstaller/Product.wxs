@@ -9,11 +9,13 @@
   <?endif?>
 
   <Product Id="$(var.productCode)"
-           Name="WixRandomAppInstaller" Language="1033" 
+           Name= "!(loc.ProductName_($var.Platform))"
+           Language="1033" 
            Version="1.0.0.0" 
-           Manufacturer="EvolvedMonkeyHere"
+           Manufacturer="!(loc.CompanyName)"
            UpgradeCode="1b4fea5c-8357-48d7-ba45-381dbf95800e">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />

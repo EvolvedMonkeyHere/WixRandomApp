@@ -17,3 +17,6 @@ WixRandomApp/obj/Debug/WixRandomApp.csproj.CoreCompileInputs.cache
 WixRandomApp/obj/Debug/WixRandomApp.csproj.FileListAbsolute.txt
 WixRandomApp/obj/Debug/WixRandomApp.exe
 WixRandomApp/obj/Debug/WixRandomApp.pdb
+*.txt
+*.msi
+*.wixpdb
