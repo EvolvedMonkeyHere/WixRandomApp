@@ -15,7 +15,14 @@
            Manufacturer="!(loc.CompanyName)"
            UpgradeCode="1b4fea5c-8357-48d7-ba45-381dbf95800e">
 
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Package InstallerVersion="200"
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Description="!(loc.Desc)"
+             Comments="!(loc.Comments)"
+             Keywords="!(loc.KeyWords)"
+             Manufacturer="!(loc.CompanyName)"
+             ShortNames="yes"/>
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />

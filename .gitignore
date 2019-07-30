@@ -20,3 +20,4 @@ WixRandomApp/obj/Debug/WixRandomApp.pdb
 *.txt
 *.msi
 *.wixpdb
+*.cache

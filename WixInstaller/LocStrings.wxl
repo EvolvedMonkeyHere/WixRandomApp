@@ -4,4 +4,7 @@
 	<String Id="ProductName_x86">EvolvedMonkeyHere (32 Bit) App</String>
   <String Id="ProductName_x64">EvolvedMonkeyHere (64 Bit) App</String>
   <String Id="CompanyName">EvolvedMonkeyHere</String>
+  <String Id="Desc">Description goes here</String>
+  <String Id="KeyWords">KeyWords goes here</String>
+  <String Id="Comments">Comments goes here</String>
 </WixLocalization>
