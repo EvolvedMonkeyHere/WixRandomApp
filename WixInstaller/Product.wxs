@@ -25,27 +25,22 @@
              ShortNames="yes"/>
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+		
+    <MediaTemplate CompressionLevel="high"
+                   EmbedCab="yes"/>
+
+    <!--Add icon-->
+    <Icon Id="icon.ico" SourceFile="$(var.WixRandomApp.ProjectDir)\Resources\App.ico" />
+    <Property Id="APPPRODUCTICON" Value="icon.ico" />
+
+    <!--add url-->
+    <Property Id="APPURLINFOABOUT" Value="https://github.com/EvolvedMonkeyHere/WixRandomApp" />
+
+    <!--Add a minimal UI-->
+    <UIRef Id="WixUI_Minimal"/>
 
 		<Feature Id="ProductFeature" Title="WixInstaller" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
 	</Product>
-
-	<Fragment>
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="WixInstaller" />
-			</Directory>
-		</Directory>
-	</Fragment>
-
-	<Fragment>
-		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
-		</ComponentGroup>
-	</Fragment>
 </Wix>

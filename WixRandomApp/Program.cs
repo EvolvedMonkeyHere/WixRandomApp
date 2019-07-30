@@ -8,7 +8,6 @@ namespace WixRandomApp
         {
             Console.WriteLine("RandomApp :: This is Test");
             Console.Read();
-
         }
     }
 }
