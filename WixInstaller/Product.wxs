@@ -9,7 +9,7 @@
   <?endif?>
 
   <Product Id="$(var.productCode)"
-           Name= "!(loc.ProductName_($var.Platform))"
+           Name= "!(loc.ProductName_$(var.Platform))"
            Language="1033" 
            Version="1.0.0.0" 
            Manufacturer="!(loc.CompanyName)"
